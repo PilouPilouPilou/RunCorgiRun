@@ -1,5 +1,3 @@
-using System.Collections;
-using UnityEngine;
 
 public class Beer : TimedObject
 {
@@ -8,5 +6,4 @@ public class Beer : TimedObject
         SecondsOnScreen = GameParameters.BeerSecondsOnScreen;
         base.Start();
     }
-
 }
