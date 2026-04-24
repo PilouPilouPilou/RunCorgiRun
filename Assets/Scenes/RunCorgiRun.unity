@@ -677,6 +677,7 @@ MonoBehaviour:
   Prefab: {fileID: 1615300031233320814, guid: 82bf486d37da1a04abae6d7d3f485a38, type: 3}
   minimumSecondsToWait: 0
   maximumSecondsToWait: 0
+  isActive: 0
 --- !u!114 &598691884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -692,6 +693,7 @@ MonoBehaviour:
   Prefab: {fileID: 671796748025778419, guid: d549c9bfe8952d94a917871938f8b761, type: 3}
   minimumSecondsToWait: 0
   maximumSecondsToWait: 0
+  isActive: 0
 --- !u!114 &598691885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -707,6 +709,7 @@ MonoBehaviour:
   Prefab: {fileID: 3187663476716725987, guid: d51d533cce32f484b8a7c69920c2b1ba, type: 3}
   minimumSecondsToWait: 0
   maximumSecondsToWait: 0
+  isActive: 0
 --- !u!114 &598691886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -722,6 +725,7 @@ MonoBehaviour:
   Prefab: {fileID: 4530679574244358427, guid: 89509761a30024f48a99cba7c8b341f4, type: 3}
   minimumSecondsToWait: 0
   maximumSecondsToWait: 0
+  isActive: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,6 +1492,7 @@ MonoBehaviour:
   DrunkSprite: {fileID: 21300000, guid: c82cdbc270a2b884380d9606b1d5754f, type: 3}
   SoberSprite: {fileID: 21300000, guid: 7f658dbc82216da45a02d5f439ea8c90, type: 3}
   Ui: {fileID: 1787798721}
+  Game: {fileID: 2095934113}
 --- !u!50 &1943110871
 Rigidbody2D:
   serializedVersion: 5
@@ -1728,6 +1733,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game
   Ui: {fileID: 1787798721}
   GameTimer: {fileID: 890662660}
+  Corgi: {fileID: 1943110870}
+  BeerPlacer: {fileID: 598691883}
+  BonePlacer: {fileID: 598691884}
+  MoonshinePlacer: {fileID: 598691886}
+  PillPlacer: {fileID: 598691885}
 --- !u!4 &2095934114
 Transform:
   m_ObjectHideFlags: 0

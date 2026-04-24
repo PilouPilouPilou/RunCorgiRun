@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : TimedObjectPlacer
+public class PillPlacer : TimedObjectPlacer
 {
     public void Start()
     {

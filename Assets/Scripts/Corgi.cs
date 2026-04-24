@@ -12,6 +12,7 @@ public class Corgi : MonoBehaviour
     public Sprite DrunkSprite;
     public Sprite SoberSprite;
     public UI Ui;
+    public Game Game;
     
     private Coroutine soberUpCoroutine;
     private int randomMoveCounter = 0;
@@ -28,6 +29,15 @@ public class Corgi : MonoBehaviour
         {
             MoveRandomly();
         }
+    }
+
+    public void Reset()
+    {
+        isPlastered = false;
+        isDrunk = false;
+        ChangeToSoberSprite();
+        spriteRenderer.flipX = false;
+        transform.position = new Vector3(0,0,0);
     }
 
     private void MoveRandomly()
@@ -61,6 +71,10 @@ public class Corgi : MonoBehaviour
 
     public void MoveManually(Vector2 direction)
     {
+        if (!Game.isPlaying())
+        {
+            return;
+        }
         if (!isPlastered)
         {
             Move(direction);
