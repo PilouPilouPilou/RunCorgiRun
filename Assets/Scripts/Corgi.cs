@@ -6,6 +6,8 @@ using Random = UnityEngine.Random;
 
 public class Corgi : MonoBehaviour
 {
+    public Sounds Sounds;
+
     private SpriteRenderer spriteRenderer;
     private bool isDrunk = false;
     private bool isPlastered = false;
@@ -110,6 +112,7 @@ public class Corgi : MonoBehaviour
         {
             Destroy(other.gameObject);
             GetPlastered();
+            Sounds.PlayMoonshineSound();
         }
     }
 
@@ -126,6 +129,7 @@ public class Corgi : MonoBehaviour
         {
             GetDrunk();
             Destroy(other.gameObject);
+            Sounds.PlayBeerSound();
         }
         if (other.tag == "Bone")
         {
@@ -133,11 +137,13 @@ public class Corgi : MonoBehaviour
             Ui.SetScoreText(ScoreKeeper.GetScore());
             print(message:"Score: " + ScoreKeeper.GetScore());
             Destroy(other.gameObject);
+            Sounds.PlayBoneSound();
         }
         if (other.tag == "Pill")
         {
             SoberUp();
             Destroy(other.gameObject);
+            Sounds.PlayPillSound();
         }
     }
 

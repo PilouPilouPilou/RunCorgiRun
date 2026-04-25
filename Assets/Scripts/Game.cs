@@ -10,6 +10,8 @@ public class Game : MonoBehaviour
     public MoonshinePlacer MoonshinePlacer;
     public PillPlacer  PillPlacer;
     public Music Music;
+    public Sounds Sounds;
+
     
     private bool isGameRunning = false;
     
@@ -33,12 +35,14 @@ public class Game : MonoBehaviour
     public void OnStartButtonClicked()
     {
         Ui.HideStartScreen();
+        Sounds.PlayPoopSound();
         InitializeGame();
     }
     
     public void OnPlayAgainButtonClicked()
     {
         Ui.HideGameOverScreen();
+        Sounds.PlayPoopSound();
         InitializeGame();
     }
 
