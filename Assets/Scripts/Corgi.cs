@@ -15,6 +15,7 @@ public class Corgi : MonoBehaviour
     public Sprite SoberSprite;
     public UI Ui;
     public Game Game;
+    public ParticleSystem BubbleParticles;
     
     private Coroutine soberUpCoroutine;
     private int randomMoveCounter = 0;
@@ -120,6 +121,7 @@ public class Corgi : MonoBehaviour
     {
         isPlastered = true;
         ChangeToDrunkSprite();
+        BubbleParticles.Play();
         StartSoberingUp();
     }
 
@@ -151,6 +153,7 @@ public class Corgi : MonoBehaviour
     {
         isDrunk = true;
         ChangeToDrunkSprite();
+        BubbleParticles.Play();
         StartSoberingUp();
     }
 
@@ -172,6 +175,7 @@ public class Corgi : MonoBehaviour
         ChangeToSoberSprite();
         isDrunk = false;
         isPlastered = false;
+        BubbleParticles.Stop();
     }
 
     private void ChangeToSoberSprite()
