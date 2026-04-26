@@ -39,6 +39,7 @@ public class Corgi : MonoBehaviour
         isPlastered = false;
         isDrunk = false;
         ChangeToSoberSprite();
+        BubbleParticles.Stop();
         spriteRenderer.flipX = false;
         transform.position = new Vector3(0,0,0);
     }
